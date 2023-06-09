@@ -1,0 +1,64 @@
+/* Define el fondo de la página con una imagen */
+body {
+  background-image: url('fondo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Define un contenedor para los videos e imagenes */
+.container-video {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Define la posición y dimensiones de las imagenes y videos */
+img,
+video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Define el orden z-index de las imagenes */
+img {
+  z-index: 2;
+}
+
+/* Define el orden z-index de los videos y los oculta */
+video {
+  z-index: 1;
+  display: none;
+}
+
+/* Define la clase para mostrar una imagen por encima de las otras */
+.show-image {
+  z-index: 3;
+}
+
+/* Define el color de fondo al hacer hover sobre las imagenes de cada estación */
+.container-video:hover img[src="img/otoño.png"] {
+  background-color: #FFA07A;
+  /* Salmon */
+}
+
+.container-video:hover img[src="img/invierno.png"] {
+  background-color: #ADD8E6;
+  /* Light Blue */
+}
+
+.container-video:hover img[src="img/primavera.png"] {
+  background-color: #98FB98;
+  /* Pale Green */
+}
+
+.container-video:hover img[src="img/verano.png"] {
+  background-color: #FFE4B5;
+  /* Moccasin */
+}
