@@ -1,3 +1,4 @@
+function estaciones() {
   // Obtener los elementos de la imagen, el video y el audio
   const imgs = document.querySelectorAll('img');
 
@@ -25,3 +26,6 @@
       img.classList.remove('show-image');
     });
   }
+}
+
+document.addEventListener('DOMContentLoaded', estaciones);

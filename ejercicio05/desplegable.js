@@ -13,7 +13,7 @@ const opcionesProvincia = {
   cataluna: ["Barcelona", "Girona", "Tarragona"],
   comunidad_valenciana: ["Valencia", "Alicante", "Castellón"],
   extremadura: ["Badajoz", "Cáceres"],
-  galicia: ["A Coruña", "Lugo", "Ourense","Pontevedra"],
+  galicia: ["A Coruña", "Lugo", "Ourense", "Pontevedra"],
   islas_baleares: ["Palma de Mallorca"],
   islas_canarias: ["Las Palmas", "Santa Cruz de Tenerife"],
   la_rioja: ["Logroño"],
@@ -25,24 +25,26 @@ const opcionesProvincia = {
 
 // Función para actualizar las opciones de provincias
 function actualizarProvincias() {
-  // Obtener la comunidad autónoma seleccionada
   const comunidadSeleccionada = comunidad.value;
   
-  // Limpiar las opciones actuales de provincias
-  provincia.innerHTML = "";
+  provincia.innerHTML = ""; // Limpiar las opciones actuales de provincias
   
-  // Si se seleccionó una comunidad autónoma, habilitar la lista de provincias y agregar las opciones correspondientes
   if (comunidadSeleccionada) {
-    provincia.disabled = false;
+    provincia.disabled = false; // Habilitar la lista de provincias
+    
     opcionesProvincia[comunidadSeleccionada].forEach(opcion => {
-      const opcionHTML = `<option value="${opcion}">${opcion}</option>`;
-      provincia.innerHTML += opcionHTML;
+      const opcionElemento = document.createElement("option");
+      opcionElemento.value = opcion;
+      opcionElemento.textContent = opcion;
+      provincia.appendChild(opcionElemento);
     });
   } else {
-    // Si no se seleccionó una comunidad autónoma, deshabilitar la lista de provincias y agregar una opción por defecto
-    provincia.disabled = true;
-    const opcionHTML = `<option value="">Seleccione una comunidad autónoma primero</option>`;
-    provincia.innerHTML = opcionHTML;
+    provincia.disabled = true; // Deshabilitar la lista de provincias
+    
+    const opcionElemento = document.createElement("option");
+    opcionElemento.value = "";
+    opcionElemento.textContent = "Seleccione una comunidad autónoma primero";
+    provincia.appendChild(opcionElemento);
   }
 }
 

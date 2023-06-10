@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <title>1.Validación de un formulario</title>
+  <title>1. Validación de un formulario</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,36 +9,34 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 </head>
-
 <body>
-  
-  <div class="container">
-    
-    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
-        <div class="col-md-6">
-          <h1 class="text-center">Validación de un formulario</h1>
-          <form action="" method="" id="formulario" name="formulario" onsubmit="return validarFormulario()">
-            <div class="form-group mb-2">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo">
-            </div>
+  <main>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="col-md-6">
+        <h1 class="text-center">Validación de un formulario</h1>
+        <form action="" method="" id="formulario" name="formulario" onsubmit="return validarFormulario()">
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="name" placeholder="Nombre Completo">
+          </div>
 
-            <div class="form-group mb-2">
-              <input type="email" class="form-control" id="email" placeholder="Email">
-            </div>
+          <div class="form-group mb-2">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+          </div>
 
-            <div class="form-group mb-2">
-              <input type="number" class="form-control" id="age" placeholder="Edad">
-            </div>
+          <div class="form-group mb-2">
+            <input type="number" class="form-control" id="age" placeholder="Edad">
+          </div>
 
-            <button type="submit" class="btn btn-primary btn-block w-100">Enviar</button>
-          </form>
-        </div>
+          <button type="submit" class="btn btn-primary btn-block w-100">Enviar</button>
+        </form>
       </div>
     </div>
-    
-    <script src="validar.js"></script>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="validar.js"></script>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -49,5 +46,4 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 </body>
-
 </html>

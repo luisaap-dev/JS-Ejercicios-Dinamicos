@@ -7,9 +7,13 @@ function actualizarReloj() {
     document.getElementById("reloj").innerHTML = h + ":" + m +":"+ s; // Actualizar el reloj con la hora actual formateada
 
     if (m == '00' && s == '00') { // Si es la hora en punto (00:00)
-        var audio = new Audio('alarma.mp3'); // Crear un objeto de audio con el archivo de sonido
-        audio.load(); // Cargar el archivo de audio
-        audio.play(); // Reproducir el sonido
+        var audio1 = new Audio('audio/alarmaDigital.mp3'); // Crear un objeto de audio con el sonido para la hora en punto
+        audio1.load(); // Cargar el archivo de audio
+        audio1.play(); // Reproducir el sonido para la hora en punto
+    } else {
+        var audio2 = new Audio('audio/ticTac.mp3'); // Crear un objeto de audio con el sonido para el funcionamiento del reloj
+        audio2.load(); // Cargar el archivo de audio
+        audio2.play(); // Reproducir el sonido para el funcionamiento del reloj
     }
 }
 
@@ -22,7 +26,7 @@ function formatoHMS(numero) {
     }
 }
 
-// Llamar a la función actualizarReloj cada 10ms para mantener el reloj actualizado
-setInterval(actualizarReloj, 10);
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    // Llamar a la función actualizarReloj cada 10ms para mantener el reloj actualizado
+    setInterval(actualizarReloj, 10);
+});
