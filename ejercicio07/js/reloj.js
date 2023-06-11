@@ -21,7 +21,7 @@ function actualizarReloj() {
     // Si es la hora en punto (00:00)
     if (m === '00' && s === '00') {
         // Crear un objeto de audio con el sonido para la hora en punto
-        var audio1 = new Audio('audio/alarmaDigital.mp3');
+        var audio1 = new Audio('audio/alarma.mp3');
         audio1.type = 'audio/mpeg';
         audio1.autoplay = true;
         audio1.loop = true;
@@ -29,6 +29,7 @@ function actualizarReloj() {
         // Agregar el objeto de audio al documento
         document.body.appendChild(audio1);
     }
+    
 }
 
 // Función para agregar ceros a números menores que 10

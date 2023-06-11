@@ -40,5 +40,6 @@ function validarFormulario() {
   }
 
   // Si todo está correcto, enviar el formulario
+  alert("¡Formulario enviado correctamente!");
   return true;
 }
